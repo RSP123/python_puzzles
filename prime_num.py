@@ -10,6 +10,6 @@ def prime_number(number):
 
 #Main Function
 if __name__ == '__main__':
-  #Getting a number from the user
-  number=int(input("Enter a number to check weather it is prime or not: "))
-  prime_number(number)
+    #Getting a number from the user
+    number=int(input("Enter a number to check weather it is prime or not: "))
+    prime_number(number)
