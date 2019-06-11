@@ -3,10 +3,10 @@
 def prime_number(number):
     if number%2 == 0:
         #When condition is true
-        print("It is prime number >>",number)
+        return True
     else:
         #When condition is false
-        return print("It is not prime number >>",number)
+        return False
 
 #Main Function
 if __name__ == '__main__':
