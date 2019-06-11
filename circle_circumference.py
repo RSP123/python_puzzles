@@ -18,11 +18,13 @@ def main():
     circumference_circle(radius)
     area_circle(radius)
 
-radius = float(input("Enter the Radius of circle >> "))
-ci=circumference_circle(radius)
-area=area_circle(radius)
-#Prints the values of circumference and area of circle
-print("Circumference of Cirlce is %.5f:" %ci, "Area of circle is :%f" %area )
+
+
+
 if __name__ == "__main__" :
     main()
-#END
+    radius = float(input("Enter the Radius of circle >> "))
+    ci=circumference_circle(radius)
+    area=area_circle(radius)
+    #Prints the values of circumference and area of circle
+    print("Circumference of Cirlce is %.5f:" %ci, "Area of circle is :%f" %area )
