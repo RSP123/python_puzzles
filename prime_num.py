@@ -11,8 +11,8 @@ def prime_number(number):
 	else:
         	# When condition is false
 			return True
-
-# Main Function
+""" 2 line indentation ??? """
+# Main Function """ Is this main function ????"""
 if __name__ == '__main__':
 	# Getting a number from the user
 	number=int(input("Enter a number to check weather it is prime or not: "))
