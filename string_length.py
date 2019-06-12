@@ -12,4 +12,5 @@ def string_function(string):
 
 if __name__ == "__main__":
     string = input("Enter a string here > ")    # User input
-    print("Given string is : ", string,"Length is : ", string_function(string))
+    print(string_function(len))
+    # print("Given string is : ", string,"Length is : ", string_function(string))
