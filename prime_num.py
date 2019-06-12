@@ -6,13 +6,13 @@ def prime_number(number):
 	if number == 1 or number < 0:
 		return False
 
-	# Iterating from 2 to check the number is prime or not
-	for i in range(2, number):
-	   	if (number % i) == 0:
+		# Iterating from 2 to check the number is prime or not
+		for i in range(2, number):
+			if (number % i) == 0:
 			# Returns False if the number is even
-		   	return False
-		else:
-			return True
+				return False
+			else:
+				return True
 
 
 def main():

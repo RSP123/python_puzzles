@@ -1,3 +1,5 @@
-from time_greetings_4 import currentTime
+# from time_greetings_4 import currentTime
 
-print(currentTime("Jayanth Nagaraj"))
+for i in range(2,9):
+    print(i)
+# print(currentTime("Jayanth Nagaraj"))
