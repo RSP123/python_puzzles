@@ -1,24 +1,29 @@
 # This program check weather the given number is prime or not
 # Function to check prime number
+
 def prime_number(number):
-	# Checking number equals to 1
+	# Returning False for number 1 and less then 1
 	if number == 1 or number < 0:
 		return False
 
+	# Iterating from 2 to check the number is prime or not
 	for i in range(2, number):
 	   	if (number % i) == 0:
-	    	# When condition is true
+			# Returns False if the number is even
 		   	return False
-	else:
-        	# When condition is false
+		else:
 			return True
-""" 2 line indentation ??? """
-# Main Function """ Is this main function ????"""
-if __name__ == '__main__':
-	# Getting a number from the user
+
+
+def main():
+	# Main function
 	number=int(input("Enter a number to check weather it is prime or not: "))
-    # Input from user
 	if prime_number(number):
 		print("The given number => ", number, " is a prime number")
 	else:
 	    print("The given number => ", number, " is not a prime number")
+
+# Checks the program call name
+if __name__ == '__main__':
+	# NOTE: This block runs when the user compiles this file only ***
+	main()
