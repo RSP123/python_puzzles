@@ -11,5 +11,8 @@ def largest_list(list):
 
 
 if __name__ == "__main__":
-    list = int(input("Enter three or more number to find larger number :> "))
+    element = int(input("Enter the element to find largest element in list :> "))
+    for i in range(1, element+1):
+        a=int(input("Enter the number >:"))
+        list.append(a)
     print(largest_list(list))

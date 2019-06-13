@@ -1,11 +1,13 @@
 # This program convert lowercase to uppercase and camelcase
 # Function for uppercase
 def upper_case(len(lower)):
-    upper = ord(lower) + 67
+    upper = ord(lower[i]) >= 67
     return upper
 
 
-def camelcase():
+def camelcase(lower):
+    
+
     return camel
 
 
