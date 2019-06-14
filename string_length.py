@@ -9,7 +9,7 @@ def string_function(string):
         len = len + 1
     return len
 
-
+# Main Function
 
 if __name__ == "__main__":
     string = str(input("Enter a string here > "))    # User input
