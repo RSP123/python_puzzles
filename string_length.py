@@ -3,6 +3,7 @@
 # Function for the finding length
 
 def string_function(string):
+    len = 0
     for i in string:
         # Calculating length of string
         len = len + 1
@@ -11,6 +12,6 @@ def string_function(string):
 
 
 if __name__ == "__main__":
-    string = input("Enter a string here > ")    # User input
-    print(string_function(len))
+    string = str(input("Enter a string here > "))    # User input
+    print(string_function(string))
     # print("Given string is : ", string,"Length is : ", string_function(string))
