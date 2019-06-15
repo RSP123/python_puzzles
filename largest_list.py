@@ -9,10 +9,9 @@ def largest_list(list_larger):
             max = b
     return max
 
+# Main Function
 
 if __name__ == "__main__":
-    element = int(input("Enter the element to find largest element in list :> "))
-    for i in range(1, element+1):
-        list_larger=list(map(int,input("Enter the number >:").split()))
-        # list.append(a)
+    #Input from user
+    list_larger=list(map(int,input("Enter the number >:").split()))
     print(largest_list(list_larger))
