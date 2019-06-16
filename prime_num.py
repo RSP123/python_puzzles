@@ -3,9 +3,9 @@
 
 def prime_number(number):
 	# Returning False for number 1 and less then 1
-	if number == 2:
+	if number == 2 or number == 1:
 		return True
-	elif number <= 1 or number%2 == 0:
+	elif number < 1 or number%2 == 0:
 		return False
 	else:
 		# Iterating from 2 to check the number is prime or not
