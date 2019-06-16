@@ -12,23 +12,23 @@ def lcm(a, b):
             lcm = s
             break
         s = s+1
-        
+
     return lcm
 
 if __name__ == "__main__":
 
-    a = 645
-    b = 434
+    a = 6
+    b = 4
     print("LCM of a =>", a, "b => ", b, "is =>", lcm(a, b))
 
-    a = 645
-    b = 434
+    a = 63
+    b = 43
     print("LCM of a =>", a, "b => ", b, "is =>", lcm(a, b))
 
-    a = 645
-    b = 434
+    a = 23
+    b = 46
     print("LCM of a =>", a, "b => ", b, "is =>", lcm(a, b))
 
-    a = 645
-    b = 434
+    a = 56
+    b = 35
     print("LCM of a =>", a, "b => ", b, "is =>", lcm(a, b))
