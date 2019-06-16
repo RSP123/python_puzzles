@@ -6,26 +6,16 @@
 
 
 
+def check(s):
+    s_count = 0
 
-def text(num):
-    if 0 > num > -250:
-        num = range(num)
-        print(num)
-        text(num)
+    with open(s ,'r') as new_file:
 
-def chumma(n):
-    while n < 0:
-        chumma(7)
-        print("chumma")
+        s_count = new_file.readlines()
 
-def edhu_chumma(num):
-    m = 10
-    a = range(num)
-    print(m,*a)
+    return s_count
 
-
-def m_n(m, n):
-    a = range(m, m*n+1, n)
-    print(*a)
-
-m_n(3, 6)
+s = "open.txt"
+print(check(s))
+f = check(s)
+print(len(f))
