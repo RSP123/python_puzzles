@@ -6,11 +6,11 @@ PI = 3.14
 
 def radius_of_circle(area):
     radius= (area/PI) ** 0.5
-    return radius
+    return round(radius,3)
 
 # Main function
 
 if __name__ =='__main__':
     area=float(input("Enter the area of circle: "))
     # radius_of_circle(area)
-    print("Radius of circle is: %f " %radius_of_circle(area))
+    print("Radius of circle is: %.2f " %radius_of_circle(area))
