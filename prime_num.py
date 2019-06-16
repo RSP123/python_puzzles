@@ -9,7 +9,7 @@ def prime_number(number):
 		return False
 	else:
 		# Iterating from 2 to check the number is prime or not
-		for i in range(3, int((number/2))+1, 2):
+		for i in range(3, int((number/3))+1, 2):
 			if (number%i) == 0:
 			    return False
 	return True
