@@ -1,9 +1,11 @@
 def greeting(name = "Your_Full_Name"):
     return "Hi " + name.split(" ")[0] + "!"
 
-name = input("Type your Firstname and lastname > ")
 
-print(greeting(name))
+if __name__=="__main__":
+    name = input("Type your Firstname and lastname > ")
+
+    print(greeting(name))
 
 #
 # new_str = "Hi jayanth this is sample "
