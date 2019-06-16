@@ -7,14 +7,19 @@ def read_text_file(file_name):
     count = []
     with open(file_name,'r') as new_file:
         file_data = new_file.read()
+        new_file.seek(0)
+
+        # print(file_data)
 
         words_count = file_data.split()
-        s_count = file_data.count(\n)
+        s_count = new_file.readlines()
+
+        # print(s_count)
 
         count.append(len(file_data))
         count.append(len(words_count))
-        count.append(s_count)
-        new_file.close()
+        count.append(len(s_count))
+
     return count
 
 # Main Function
