@@ -11,7 +11,8 @@ from gcd import gcd
                                 (8, 2, 2, 8),
                                 (5, 1, 3, 5),
                                 (2, 8, 3, 8),
-                                (9, 3, 9, 9)
+                                (9, 3, 9, 9),
+                                (2, 2, 2, 2)
                             ]
                         )
 def test_largest(input_1, input_2, input_3, expected_output):
