@@ -3,12 +3,12 @@
 # Function for GCD
 def gcd(a, b):
     if a > b:
-        smallest = b
+        s = b
     else:
-        smallest = a
-    for i range(1,smallest +1 ):
-        if (a % i) and (b % i):
-            res = i 
+        s = a
+    for i in range(1, s+1):
+        if ((a % i==0) and (b % i==0)):
+            res = i
     return res
 
 # Main
