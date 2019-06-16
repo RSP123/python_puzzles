@@ -2,6 +2,16 @@ import pytest
 from three_variable import largest
 from prime_num import prime_number
 from gcd import gcd
+from circle_circumference import circumference_circle, area_circle
+from lcm import lcm
+from email_check import email_check
+from largest_list import largest_list
+from factorial_series import factorial
+from fibonacci_series import fibonacci
+from greeting_msg import greeting
+from palindrome import palindrom
+from radius_circle import radius_of_circle
+from string_length import string_function
 
 
 @pytest.mark.parametrize("input_1, input_2, input_3, expected_output",
@@ -50,3 +60,149 @@ def test_prime_number(input, expected_output):
 
 def test_gcd(input_1,input_2,expected_output):
     assert gcd(input_1, input_2) == expected_output
+
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                               (4, 25.1200),
+                               (7, 43.960),
+                               (14, 87.920),
+                               (16, 100.48),
+                               (34, 213.520)
+                             ]
+                        )
+def test_circumference_circle(input_1, expected_output):
+    assert circumference_circle(input_1) == expected_output
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                                (4, 50.240),
+                                (7, 153.860),
+                                (14, 615.440),
+                                (16, 803.840),
+                                (34, 3629.840)
+
+                             ]
+                        )
+def test_area_circle(input_1,expected_output):
+    assert area_circle(input_1) == expected_output
+
+@pytest.mark.parametrize("input_1,input_2,expected_output",
+                            [
+                               (6, 4, 12),
+                               (63, 43, 2709),
+                               (23, 46, 46),
+                               (56, 35, 280),
+                               (78, 23, 1794)
+                            ]
+                        )
+def test_lcm(input_1,input_2,expected_output):
+    assert lcm(input_1,input_2) == expected_output
+
+# @pytest.mark.parametrize("input_1,expected_output",
+#                               [
+#                                ("pradeep.rs@hotmail.com",True),
+#                                (jayanth@s@hotmail.com, False),
+#                                (krishoth.m@hotmail.com, True),
+#                                (hem-a@hotmail.com, False),
+#                                (pradeep323@gmail.com, True)
+#                               ]
+#                         )
+# def test_email_check(input_1,expected_output):
+#     assert email_check(input_1) == expected_output
+
+# @pytest.mark.parametrize("input_1,expected_output",
+#                               [
+#                                  (23 3 14, 23),
+#                                  (34 56 2, 56),
+#                                  (203 45 67, 203),
+#                                  (12 45 78, 78),
+#                                  (3 45 56, 56),
+#                                  (45 45 8, 45),
+#                                  (34 35 56, 56)
+#                               ]
+#                         )
+#
+# def test_largest_list(input_1,expected_output):
+#     assert largest_list(input_1) == expected_output
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                                (5, 120),
+                                (1, 1),
+                                (3, 6),
+                                (12, 479001600),
+                                (9, 362880),
+                                (7, 5040)
+                             ]
+                        )
+def test_factorial(input_1,expected_output):
+    assert factorial(input_1) == expected_output
+
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                                (5, 5),
+                                (12, 144),
+                                (23, 28657),
+                                (8, 21),
+                                (15, 610),
+                                (18, 2584)
+                             ]
+                        )
+def test_fibonacci(input_1,expected_output):
+    assert fibonacci(input_1) == expected_output
+
+
+
+@pytest.mark.parametrize("input_1,expected_output",
+                              [
+                                ("pradeep rs", "Hi pradeep!"),
+                                ("jayanth sn", "Hi jayanth!"),
+                                ("krishoth m", "Hi krishoth!"),
+                                ("hema rs", "Hi hema!"),
+                                ("divya rs", "Hi divya!"),
+                                ("monika rs", "Hi monika!"),
+                                ("pooja rs", "Hi pooja!")
+
+                              ]
+                        )
+def test_greeting(input_1,expected_output):
+    assert greeting(input_1) == expected_output
+
+
+@pytest.mark.parametrize("input_1,expected_output",
+                            [
+                              ("asdsa", True),
+                              ("asfsfg", False),
+                              ("hellleh", True),
+                              ("malayalam", True),
+                              ("tamil", False)
+                            ]
+                        )
+def test_palindrom(input_1,expected_output):
+    assert palindrom(input_1) == expected_output
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                               (4, 1.129),
+                               (5, 1.262),
+                               (12, 1.955),
+                               (8, 1.596),
+                               (45, 3.786),
+                               (56, 4.223)
+                             ]
+                        )
+def test_radius_of_circle(input_1,expected_output):
+    assert radius_of_circle(input_1) == expected_output
+
+@pytest.mark.parametrize("input_1,expected_output",
+                            [
+                              ("pradeep", 7),
+                              ("jayanth sn", 10),
+                              ("i love chennai", 14),
+                              ("iam indian", 10)
+                            ]
+                        )
+def test_string_function(input_1,expected_output):
+    assert string_function(input_1) == expected_output
