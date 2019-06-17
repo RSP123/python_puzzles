@@ -114,20 +114,20 @@ def test_lcm(input_1,input_2,expected_output):
 # def test_email_check(input_1,expected_output):
 #     assert email_check(input_1) == expected_output
 
-# @pytest.mark.parametrize("input_1,expected_output",
-#                               [
-#                                  (23 3 14, 23),
-#                                  (34 56 2, 56),
-#                                  (203 45 67, 203),
-#                                  (12 45 78, 78),
-#                                  (3 45 56, 56),
-#                                  (45 45 8, 45),
-#                                  (34 35 56, 56)
-#                               ]
-#                         )
-#
-# def test_largest_list(input_1,expected_output):
-#     assert largest_list(input_1) == expected_output
+@pytest.mark.parametrize("input_1,expected_output",
+                              [
+                                 ([23, 3, 14], 23),
+                                 ([34, 56, 2], 56),
+                                 ([203, 45, 67], 203),
+                                 ([12, 45, 78], 78),
+                                 ([3, 45, 56], 56),
+                                 ([45, 45, 8], 45),
+                                 ([34, 35, 56], 56)
+                              ]
+                        )
+
+def test_largest_list(input_1,expected_output):
+    assert largest_list(input_1) == expected_output
 
 @pytest.mark.parametrize("input_1,expected_output",
                              [
