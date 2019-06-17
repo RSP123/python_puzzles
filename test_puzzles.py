@@ -12,6 +12,8 @@ from greeting_msg import greeting
 from palindrome import palindrom
 from radius_circle import radius_of_circle
 from string_length import string_function
+from first_last_in_new_list import new_list
+
 
 
 @pytest.mark.parametrize("input_1, input_2, input_3, expected_output",
@@ -206,3 +208,21 @@ def test_radius_of_circle(input_1,expected_output):
                         )
 def test_string_function(input_1,expected_output):
     assert string_function(input_1) == expected_output
+
+
+@pytest.mark.parametrize("input_1,expected_output",
+                                [
+                                  ([12, 34, 45, 46, 56], [12, 56]),
+                                  ([34, 35, 67, 45, 89], [34, 89]),
+                                  ([56, 2, 4, 6, 342], [56, 342]),
+                                  ([359, 23, 45, 34, 253], [359, 253]),
+                                  ([349, 23, 456, 34, 56], [349, 56]),
+                                  ([9, 3, 5, 4, 23], [9, 23]),
+                                  ([4, 23, 45, 34, 6], [4, 6])
+
+
+                                ]
+                        )
+
+def test_new_list(input_1,expected_output):
+    assert new_list(input_1) == expected_output
