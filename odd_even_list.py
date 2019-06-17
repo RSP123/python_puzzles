@@ -2,20 +2,22 @@
 
 # Function to finding odd or even
 def odd_even(list):
+    # Checking for odd element
+    new_even = []
+    new_odd = []
+    lis = []
     for i in list:
-        new = []
-        # Checking for odd element
         if (i%2) != 0:
-            new.append(i)
-        # Checking for even element
-        elif (i%2) == 0:
-            new.append(i)
-    return new
+            new_odd.append(i)
+        else:
+            new_even.append(i)
+        lis = new_odd + new_even
+    return lis
 
 # Main
 if __name__ == "__main__":
 
-    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list = [1, 26, 3, 34, 5, 56, 7, 28, 2, 10]
 
-    print(type(list))
+    # print(type(odd_even(list)))
     print(odd_even(list))
