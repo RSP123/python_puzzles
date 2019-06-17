@@ -13,6 +13,7 @@ from palindrome import palindrom
 from radius_circle import radius_of_circle
 from string_length import string_function
 from first_last_in_new_list import new_list
+from odd_even_list import odd_even
 
 
 
@@ -226,3 +227,14 @@ def test_string_function(input_1,expected_output):
 
 def test_new_list(input_1,expected_output):
     assert new_list(input_1) == expected_output
+
+@pytest.mark.parametrize("input,expected_output",
+                            [
+                             ( [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7, 9, 2, 4, 6, 8, 10]),
+                             ( [1, 24, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7, 9, 24, 4, 6, 8, 10]),
+                             ( [1, 22, 3, 5, 5, 63, 76, 88, 69, 10], [1, 3, 5, 5, 63, 69, 22, 76, 88, 10]),
+                             ( [1, 26, 3, 34, 5, 56, 7, 28, 2, 10], [1, 3, 5, 7, 26, 34, 56, 28, 2, 10])
+                            ]
+                        )
+def test_odd_even(input,expected_output):
+    assert odd_even(input) == expected_output
