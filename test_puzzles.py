@@ -14,6 +14,7 @@ from radius_circle import radius_of_circle
 from string_length import string_function
 from first_last_in_new_list import new_list
 from odd_even_list import odd_even
+from backward_string import backward
 
 
 
@@ -238,3 +239,14 @@ def test_new_list(input_1,expected_output):
                         )
 def test_odd_even(input,expected_output):
     assert odd_even(input) == expected_output
+
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                               ("iannehc morf peedarp mi olleh iih", "hii hello im pradeep from chennai"),
+                               ("chennai", "iannehc"),
+                               ("i love india", "aidni evol i"),
+                               ("software engineer", "reenigne erawtfos" )
+                             ]
+                        )
+def test_backward(input_1,expected_output):
+    assert backward(input_1) == expected_output
