@@ -4,7 +4,7 @@
 def is_prime(current_number):
     limit = current_number * 2
     # Current_number checking with prime Function
-    for i in range(current_number,limit):
+    for i in range(current_number+1,limit):
         if prime_number(i):
             return i
 
@@ -14,7 +14,7 @@ def prime_number(number):
 	# Returning False for number 1 and less then 1
 	if number == 2 or number == 1:
 		return True
-	elif number < 1:
+	elif number < 1  or number%2 == 0:
 		return False
 	else:
 		# Iterating from 2 to check the number is prime or not
@@ -27,5 +27,5 @@ def prime_number(number):
 
 # Main
 if __name__ == "__main__":
-    current_number=int(input("Enter a prime number ")) + 1
+    current_number=int(input("Enter a prime number "))
     print("The next prime number is: ",is_prime(current_number))
