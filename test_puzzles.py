@@ -15,6 +15,7 @@ from string_length import string_function
 from first_last_in_new_list import new_list
 from odd_even_list import odd_even
 from backward_string import backward
+from next_prime import is_prime
 
 
 
@@ -250,3 +251,15 @@ def test_odd_even(input,expected_output):
                         )
 def test_backward(input_1,expected_output):
     assert backward(input_1) == expected_output
+
+@pytest.mark.parametrize("input,expected_output",
+                            [
+                               (2, 3),
+                               (3, 5),
+                               (11, 13),
+                               (17, 19),
+                               (6, 7)
+                            ]
+                        )
+def test_is_prime(input,expected_output):
+    assert is_prime(input) == expected_output
