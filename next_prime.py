@@ -24,7 +24,6 @@ def prime_number(number):
 	return True
 
 
-
 # Main
 if __name__ == "__main__":
     current_number=int(input("Enter a prime number "))
