@@ -1,17 +1,21 @@
 # This program prints dinomination
 
+d = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
 # Function for dinomination
-def denomi(amt):
-    d = list(map(int,[2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]))
-    for i in range(len(d)):
-        if amt >= d[i]:
-            change = d[i]
-            print("amt -loop",change)
-        else:
-            d[i] = i + 1
-            print("else loop",d[i])
+def denomination(amt):
+    change = []
+
+    for i in range(0,len(d)):
+        # Loop for comparing with amount
+        if amt >= d[i] and amt > 0:
+            rupee = amt%d[i]
+            rupee_count = int(amt/d[i])
+            change.append((d[i], rupee_count))
+            amt = rupee
     return change
 
+
+# Main
 if __name__ =="__main__":
-    amt = 553
-    print("result",denomi(amt))
+    amt = 10900
+    print(amt, " change => ",denomination(amt))
