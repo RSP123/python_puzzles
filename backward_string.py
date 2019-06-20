@@ -15,5 +15,5 @@ def backward(str):
 
 # Main
 if __name__=="__main__":
-    str = "hii hello im pradeep from chennai"
+    str = "hii hello im pradeep from chennai "
     print("backward of string :",backward(str))
