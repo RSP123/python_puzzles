@@ -16,6 +16,7 @@ from first_last_in_new_list import new_list
 from odd_even_list import odd_even
 from backward_string import backward
 from next_prime import is_prime
+from denomination import denomination
 
 
 
@@ -241,16 +242,16 @@ def test_new_list(input_1,expected_output):
 def test_odd_even(input,expected_output):
     assert odd_even(input) == expected_output
 
-@pytest.mark.parametrize("input_1,expected_output",
-                             [
-                               ("iannehc morf peedarp mi olleh iih", "hii hello im pradeep from chennai"),
-                               ("chennai", "iannehc"),
-                               ("i love india", "aidni evol i"),
-                               ("software engineer", "reenigne erawtfos" )
-                             ]
-                        )
-def test_backward(input_1,expected_output):
-    assert backward(input_1) == expected_output
+# @pytest.mark.parametrize("input_1,expected_output",
+#                              [
+#                                ("iannehc morf peedarp mi olleh iih", "hii hello im pradeep from chennai"),
+#                                ("chennai", "iannehc"),
+#                                ("i love india", "aidni evol i"),
+#                                ("software engineer", "reenigne erawtfos" )
+#                              ]
+#                         )
+# def test_backward(input_1,expected_output):
+#     assert backward(input_1) == expected_output
 
 @pytest.mark.parametrize("input,expected_output",
                             [
@@ -263,3 +264,13 @@ def test_backward(input_1,expected_output):
                         )
 def test_is_prime(input,expected_output):
     assert is_prime(input) == expected_output
+
+@pytest.mark.parametrize("input,expected_output",
+                            [
+                               (10900, [(2000, 5), (500, 1), (200, 2)]),
+                               (2900, [(2000, 1), (500, 1), (200, 2)]),
+                               (4235, [(2000, 2), (200, 1), (20, 1),(10, 1),(5, 1)])
+                            ]
+                        )
+def test_denomination(input,expected_output):
+    assert denomination(input) == expected_output

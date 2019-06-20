@@ -1,17 +1,19 @@
-# This program prints backwards of string
+# Program prints backwards of string
 
 # Function for converting backward of string
 def backward(str):
-    result = []
+    reverse = []
+    backward = []
 
-    #converting to backward
-    for j in range(len(str)):
-        result = str[::-1]
+    # Spliting string into words and reverse words
+    str = str.split()
+    reverse = str.reverse()
+    backward = " ".join(str)
 
-    return result
+    return backward
 
 
 # Main
 if __name__=="__main__":
-    str = "iannehc morf peedarp mi olleh iih"
+    str = "hii hello im pradeep from chennai"
     print("backward of string :",backward(str))
