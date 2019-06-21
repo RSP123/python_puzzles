@@ -19,6 +19,7 @@ from next_prime import is_prime
 from denomination import denomination
 from minus_duplicates import duplicate
 from birthday_dictionary import birthday
+from sort_and_find import sort_find
 
 
 @pytest.mark.parametrize("input_1, input_2, input_3, expected_output",
@@ -299,3 +300,12 @@ def test_duplicate(input, expected_output):
                        )
 def test_birthday(input,expected_output):
     assert birthday(input) == expected_output
+
+
+@pytest.mark.parametrize("input,input_1,expected_output",
+                            [
+                                ([1, 2, 3, 4, 5, 6, 7, 8],3, True)
+                            ]
+                        )
+def test_sort_find(input,input_1,expected_output):
+    sort_find(input,input_1) == expected_output
