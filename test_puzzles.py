@@ -17,6 +17,7 @@ from odd_even_list import odd_even
 from backward_string import backward
 from next_prime import is_prime
 from denomination import denomination
+from minus_duplicates import duplicate
 
 
 
@@ -274,3 +275,15 @@ def test_is_prime(input,expected_output):
                         )
 def test_denomination(input,expected_output):
     assert denomination(input) == expected_output
+
+
+@pytest.mark.parametrize("input,expected_output",
+                             [
+                               ([1, 2, 2, 3, 5, 5, 4, 6], [1, 2, 3, 4, 5, 6]),
+                               ([1, 1, 2, 3, 3, 4, 4, 3], [1, 2, 3, 4]),
+                               ([1, 1, 12, 23, 34, 34, 45] , [1, 34, 12, 45, 23]),
+                               ([45, 45, 67, 78, 78, 78, 78], [67, 45, 78,])
+                             ]
+                        )
+def test_duplicate(input, expected_output):
+    assert duplicate(input) == expected_output
