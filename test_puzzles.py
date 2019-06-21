@@ -18,7 +18,7 @@ from backward_string import backward
 from next_prime import is_prime
 from denomination import denomination
 from minus_duplicates import duplicate
-
+from birthday_dictionary import birthday
 
 
 @pytest.mark.parametrize("input_1, input_2, input_3, expected_output",
@@ -287,3 +287,15 @@ def test_denomination(input,expected_output):
                         )
 def test_duplicate(input, expected_output):
     assert duplicate(input) == expected_output
+
+
+@pytest.mark.parametrize("input,expected_output",
+                           [
+                              ("pradeep", "28-5-1994"),
+                              ("krishoth", "16-3-1996"),
+                              ("jayanth", "20-1-1996"),
+                              ("hema", "31-6-1995")
+                           ]
+                       )
+def test_birthday(input,expected_output):
+    assert birthday(input) == expected_output
