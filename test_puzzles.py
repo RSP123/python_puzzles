@@ -242,16 +242,16 @@ def test_new_list(input_1,expected_output):
 def test_odd_even(input,expected_output):
     assert odd_even(input) == expected_output
 
-# @pytest.mark.parametrize("input_1,expected_output",
-#                              [
-#                                ("iannehc morf peedarp mi olleh iih", "hii hello im pradeep from chennai"),
-#                                ("chennai", "iannehc"),
-#                                ("i love india", "aidni evol i"),
-#                                ("software engineer", "reenigne erawtfos" )
-#                              ]
-#                         )
-# def test_backward(input_1,expected_output):
-#     assert backward(input_1) == expected_output
+@pytest.mark.parametrize("input_1,expected_output",
+                             [
+                               ("chennai from pradeep im hello hii", "hii hello im pradeep from chennai"),
+                               ("chennai", "chennai"),
+                               ("i love india", "india love i"),
+                               ("software engineer", "engineer software" )
+                             ]
+                        )
+def test_backward(input_1,expected_output):
+    assert backward(input_1) == expected_output
 
 @pytest.mark.parametrize("input,expected_output",
                             [
